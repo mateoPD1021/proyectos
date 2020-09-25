@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	
+		<style>
+		body {
+		background-image: url('https://lh3.googleusercontent.com/proxy/KO3Ak6XMhn_bmy2KkJsrMyacClidSJ0n6Hmk27Du8UkO6SOmmkdIpGSS_lwbS6Vteo8rIIJeBMvUHXS0lrOelsTfVpBAI4P7jwuO1vgp6BMQRfcM5C4yVwBcroaqiZJ5V1C4');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+  		background-size: 100% 100%;
+		}
+	</style>
+	
+	<title>Agregar Nueva Redes</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
+</h:head>
+<h:body>
+	<h:form>
+	
+		<div class="card text-center">
+		  <div class="card-header">
+		 <H1>
+		    <h:outputText value="Nueva Red"></h:outputText>
+		  </H1>
+		  </div>
+		 <div class="card-body">
+	
+		<h:panelGrid columns="2" cellspacing="20" style="margin: 0 auto;" >
+				<h:outputText value="Nombre"></h:outputText>
+				<h:inputText value="#{red.nombre}"></h:inputText>
+				
+				<h:outputText value="Usuario"></h:outputText>
+				<h:inputText value="#{red.usr}"></h:inputText>
+				
+				<h:outputText value="Contraseña"></h:outputText>
+				<h:inputText value="#{red.pass}"></h:inputText>
+				
+				<h:outputText value="Tipo de Cifrado"></h:outputText>
+				<h:inputText value="#{red.tipo_cifrado}"></h:inputText>
+				
+				<h:outputText value="Tipo de conexion"></h:outputText>
+				<h:inputText value="#{red.tipo}"></h:inputText>
+		</h:panelGrid>
+		  </div>
+		  <div class="card-footer text-muted">
+		  <h:commandButton value="Guardar" action="#{redBean.guardar(red)}" class="btn btn-success"></h:commandButton>
+		  <h:commandButton value="Cancelar" action="/faces/redes.xhtml" class="btn btn-danger"></h:commandButton>
+		  </div>
+	</div>
+	</h:form>
+</h:body>
+</html>
